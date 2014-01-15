@@ -441,6 +441,11 @@
       return dialCode;
     },
 
+    // get country data for the currently selected flag
+    _getSelectedCountryData: function() {
+      var countryCode = this.selectedFlagInner.attr("class").split(" ")[1];
+      return this._getCountryData(countryCode, false);
+    },
 
     // add a country <li> to the countryList <ul> container
     _appendListItems: function(countries, className) {
